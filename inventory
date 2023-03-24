@@ -1,0 +1,9 @@
+[test]
+172.20.40.111 ansible_ssh_user=root ansible_ssh_pass=incorrect
+
+#[web01]
+#172.20.44.35  ansible_ssh_user=root ansible_ssh_pass=incorrect
+
+#[web02]
+#172.20.44.201 ansible_ssh_user=sysadmin ansible_ssh_pass=incorrect
+

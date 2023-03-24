@@ -1,0 +1,15 @@
+- name: Provisioning Server
+  hosts: test
+  become: yes
+  tasks :
+    - name: Install NTP service on Centos
+      yum:
+        name: chrony
+        state: present
+      when: ansible_distribution == "CentOS"
+
+    - name: Install NTP service on Ubuntu
+      apt:
+        name: ntp
+        state: present
+      when: ansible_distribution == "Ubuntu"

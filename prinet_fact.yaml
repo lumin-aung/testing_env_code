@@ -1,0 +1,19 @@
+- name: Learnging fact variables
+  hosts: all
+  become: yes
+    #  vars: 
+    #    USRNM: luminaung
+    #    COMM:  This is the valriable user name
+  tasks:
+    - name: Print OS
+      debug:
+        var: ansible_distribution
+         
+    - name: Print Memory
+      debug:
+        var: ansible_memory_mb
+    
+    - name: Print Real Memory
+      debug:
+        var: ansible_memory_mb.real
+
